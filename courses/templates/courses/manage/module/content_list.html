@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+
+{% block title %} 
+    Module {{ module.order|add:1 }}: {{ module.title }}
+{% endblock %} 
+
+{% block content %} 
+{% with course=module.course %} 
+    <h1>Course '{{ course.title }}' </h1>
+    <div class='contents'>
+        <h3>Modules</h3>
+        <ul id='modules'>
+            {% for m in course.modules.all %} 
+                <li data-id='{{ m.id }}' 
+                    {% if m == module %}
+                        class='selected'
+                    {% endif %}>
+                
+                    <a href=
+                
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
