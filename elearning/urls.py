@@ -24,4 +24,5 @@ urlpatterns = [
          name='logout'),
     path('admin/', admin.site.urls),
     path('courses/', include('courses.urls')),
+    path('api/', include('courses.api.urls', namespace='api')),
 ]
