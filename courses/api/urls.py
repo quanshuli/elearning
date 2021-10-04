@@ -14,7 +14,6 @@ urlpatterns = [
           views.SubjectDetailView.as_view(),
           name='subject_detail'),
      path('', include(router.urls)),
-
 ]
 
 """path('courses/<pk>/enroll/',
