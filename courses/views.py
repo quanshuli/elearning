@@ -1,10 +1,11 @@
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
+from django.db.models import Count
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.base import TemplateResponseMixin, View
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from .models import Course
+from .models import Course, Subject 
 from .forms import ModuleFormSet
 from django.forms.models import modelform_factory
 from django.apps import apps
